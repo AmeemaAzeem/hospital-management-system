@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+hospital_backend/node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+temp/
+tmp/
+
+# Build folders
+dist/
+build/
