@@ -148,4 +148,3 @@ It also improved my confidence in developing real-world software systems using J
 
 ---
 
-# Auth
