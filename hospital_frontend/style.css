@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* =========================================================
+   DARK OVERLAY (FIXED STACKING)
+========================================================= */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* =========================================================
+   GLOBAL CONTENT LAYER (CLEAN FIX)
+========================================================= */
+h1, h2, h3, nav, form, table, .container, input, select, button {
+    position: relative;
+    z-index: 1;
+}
+
+/* =======================
+   HOME PAGE
+======================= */
+#home {
+    background: url("home.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* =======================
+   REGISTER PAGE
+======================= */
+#register {
+    background: url("register.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* =======================
+   DOCTORS PAGE
+======================= */
+#doctors {
+    background: url("doctors.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* =======================
+   APPOINTMENT PAGE
+======================= */
+#appointment {
+    background: url("appointment.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* =======================
+   BILLING PAGE
+======================= */
+#billing {
+    background: url("billing.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+nav {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+
+/* =======================
+   FORM DESIGN
+======================= */
+form {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.15);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+/* INPUTS */
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0097a7;
+}
+
+/* =======================
+   TABLE (FIXED CLEAN VERSION)
+======================= */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* =======================
+   PATIENT SEARCH BOX
+======================= */
+#patientResults {
+    background: white;
+    color: black;
+    max-width: 250px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#patientResults div {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#patientResults div:hover {
+    background: #00bcd4;
+    color: white;
+}
+
+/* =======================
+   HEADINGS
+======================= */
+h1, h2, h3 {
+    margin-top: 20px;
+}

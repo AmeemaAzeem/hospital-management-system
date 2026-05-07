@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: url("appointment.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* MESSAGE FIX */
+        #messageBox {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* PATIENT SEARCH DROPDOWN FIX */
+        #patientResults {
+            background: white;
+            color: black;
+            max-width: 250px;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        #patientResults div {
+            padding: 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        #patientResults div:hover {
+            background: #00bcd4;
+            color: white;
+        }
+
+        /* TABLE FIX */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            color: black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Book Appointment</h2>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <!-- =========================================================
+         APPOINTMENT FORM
+    ========================================================= -->
+    <form id="appointmentForm">
+
+        <label>Patient</label><br>
+        <input type="text" id="patientSearch" placeholder="Search Patient by Name" required>
+        <div id="patientResults"></div>
+        <br><br>
+
+        <label>Doctor</label><br>
+        <select id="doctorSelect" required>
+            <option value="">Select Doctor</option>
+        </select>
+        <br><br>
+
+        <label>Date</label><br>
+        <input type="date" id="date" required>
+        <br><br>
+
+        <label>Time</label><br>
+        <input type="time" id="time" required step="60">
+        <br><br>
+
+        <button type="submit">Book Appointment</button>
+
+    </form>
+
+    <!-- MESSAGE -->
+    <div id="messageBox"></div>
+
+    <!-- =========================================================
+         APPOINTMENT TABLE
+    ========================================================= -->
+    <h3>Appointments</h3>
+
+    <table id="appointmentsTable">
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

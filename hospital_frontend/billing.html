@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("billing.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* MAIN FORM CONTAINER */
+        .container {
+            width: 350px;
+            margin: 80px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 5;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #billMessage {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* TABLE FIX (VERY IMPORTANT) */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            border-collapse: collapse;
+            position: relative;
+            z-index: 10; /* 🔥 ensures visibility */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            color: black;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<!-- 🔥 IMPORTANT FIX -->
+<body id="billing">
+
+<h2>Billing</h2>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+
+    <form id="billingForm">
+
+        <select id="patientSelect" required>
+            <option value="">Select Patient</option>
+        </select>
+
+        <input type="number" id="amount" placeholder="Amount" required>
+
+        <button type="submit">Generate Bill</button>
+
+    </form>
+
+    <p id="billMessage"></p>
+
+</div>
+
+<h3>All Bills</h3>
+
+<table id="billTable">
+    <thead>
+        <tr>
+            <th>Patient</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- DATA COMES HERE -->
+    </tbody>
+</table>
+
+<!-- 🔥 KEEP SCRIPT AT BOTTOM -->
+<script src="script.js"></script>
+
+</body>
+</html>

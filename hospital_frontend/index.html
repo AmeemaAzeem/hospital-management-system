@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("home.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Hospital Management System</h1>
+
+<nav>
+    <a href="register.html">Patient Registration</a>
+    <a href="doctor.html">Doctor List</a>
+    <a href="appointment.html">Book Appointment</a>
+    <a href="billing.html">Billing</a>
+</nav>
+
+<div class="container">
+    <h2>Welcome to Hospital Dashboard</h2>
+    <p>Manage patients, doctors, appointments and billing easily.</p>
+</div>
+
+<!-- =========================
+     OPTIONAL: LIVE QUICK VIEW (NEW FEATURE HOOK)
+     ========================= -->
+
+<div class="container">
+    <h3>Quick Info</h3>
+
+    <div>
+        <h4>Doctors</h4>
+        <ul id="doctorList"></ul>
+    </div>
+
+</div>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
